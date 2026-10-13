@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Quest | Lab Assignment 02</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="game-header">
+        <div class="brand">
+            <p class="eyebrow">PIXEL ADVENTURE</p>
+            <h1>Flexbox <span>Quest</span></h1>
+        </div>
+
+        <div class="game-info" aria-label="Game status">
+            <span>❤️ Lives: <strong>3</strong></span>
+            <span>🪙 Coins: <strong>120</strong></span>
+            <span>⭐ Level: <strong>1</strong></span>
+            <span>🏆 Score: <strong>1250</strong></span>
+        </div>
+
+        <div class="header-actions">
+            <button type="button">Ⅱ Pause</button>
+            <button type="button">☰ Menu</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="game-area" aria-label="Game scene">
+            <div class="scene-top">
+                <span class="level-tag">WORLD 01 · GREEN VALLEY</span>
+                <span class="mission">Collect all the stars!</span>
+            </div>
+
+            <div class="scene-row scene-row-top">
+                <div class="player">
+                    <span class="player-face">●</span>
+                    <span>PLAYER</span>
+                </div>
+                <div class="star">★<small>STAR</small></div>
+            </div>
+
+            <div class="platform platform-middle">MYSTIC PLATFORM</div>
+
+            <div class="scene-row scene-row-bottom">
+                <div class="platform">CHECKPOINT</div>
+                <div class="star second-star">★<small>STAR</small></div>
+                <div class="platform">BONUS ZONE</div>
+            </div>
+
+            <p class="scene-hint">TIP: Explore the map and complete your quests.</p>
+        </section>
+
+        <section class="game-panels" aria-label="Game panels">
+            <div class="panel controls">
+                <div class="panel-heading">
+                    <span class="panel-icon">🎮</span>
+                    <div>
+                        <p class="eyebrow">MOVEMENT</p>
+                        <h2>Controls</h2>
+                    </div>
+                </div>
+
+                <div class="direction-pad">
+                    <div class="control-row">
+                        <button type="button" aria-label="Up">↑</button>
+                    </div>
+                    <div class="control-row">
+                        <button type="button" aria-label="Left">←</button>
+                        <button type="button" aria-label="Down">↓</button>
+                        <button type="button" aria-label="Right">→</button>
+                    </div>
+                </div>
+                <button class="jump-button" type="button">⬆ JUMP</button>
+                <p class="panel-note">Use your skills to keep moving.</p>
+            </div>
+
+            <div class="panel inventory">
+                <div class="panel-heading">
+                    <span class="panel-icon">🎒</span>
+                    <div>
+                        <p class="eyebrow">YOUR ITEMS</p>
+                        <h2>Inventory</h2>
+                    </div>
+                </div>
+
+                <div class="inventory-items">
+                    <div class="item"><span>⚔️</span><small>Sword</small></div>
+                    <div class="item"><span>🛡️</span><small>Shield</small></div>
+                    <div class="item"><span>🧪</span><small>Potion</small></div>
+                    <div class="item"><span>🗝️</span><small>Key</small></div>
+                    <div class="item"><span>🧭</span><small>Map</small></div>
+                    <div class="item"><span>✨</span><small>Magic</small></div>
+                </div>
+                <p class="panel-note">6 slots used · Keep collecting!</p>
+            </div>
+
+            <div class="panel quest">
+                <div class="panel-heading">
+                    <span class="panel-icon">📜</span>
+                    <div>
+                        <p class="eyebrow">YOUR OBJECTIVES</p>
+                        <h2>Quest Log</h2>
+                    </div>
+                </div>
+
+                <div class="quest-item">
+                    <div class="quest-copy"><span class="quest-dot done"></span><span>Collect 3 Stars</span></div>
+                    <strong>1 / 3</strong>
+                </div>
+                <div class="progress-track"><span class="progress-fill stars-progress"></span></div>
+
+                <div class="quest-item">
+                    <div class="quest-copy"><span class="quest-dot"></span><span>Find the Golden Key</span></div>
+                    <strong>0 / 1</strong>
+                </div>
+                <div class="progress-track"><span class="progress-fill key-progress"></span></div>
+
+                <div class="quest-item">
+                    <div class="quest-copy"><span class="quest-dot"></span><span>Defeat the Monster</span></div>
+                    <strong>0 / 1</strong>
+                </div>
+                <div class="progress-track"><span class="progress-fill monster-progress"></span></div>
+            </div>
+        </section>
+
+        <section class="display-lab">
+            <h2>Display Property Lab</h2>
+            <p>A quick visual experiment with the display types from this assignment.</p>
+            <div class="display-example">
+                <div class="demo-block">Block 1</div>
+                <div class="demo-block">Block 2</div>
+            </div>
+            <div class="display-example">
+                <span class="demo-inline">Inline 1</span>
+                <span class="demo-inline">Inline 2</span>
+            </div>
+            <div class="display-example">
+                <span class="demo-inline-block">Inline-block 1</span>
+                <span class="demo-inline-block">Inline-block 2</span>
+            </div>
+            <div class="display-example demo-flex">
+                <span>Flex item 1</span>
+                <span>Flex item 2</span>
+                <span>Flex item 3</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FLEXBOX QUEST <span>•</span> Every great adventure starts with one step.</p>
+    </footer>
+</body>
+</html>

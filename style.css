@@ -1,0 +1,522 @@
+/* Flexbox Quest — HTML and CSS only. No Grid or CSS positioning. */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #101526;
+    color: #f4f5fb;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    padding: 20px 4%;
+    background-color: #191f35;
+    border-bottom: 2px solid #303954;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+.brand h1 span {
+    color: #78e6bd;
+}
+
+.eyebrow {
+    margin: 0 0 4px;
+    color: #9ba8c9;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.game-info span {
+    display: inline-block;
+    padding: 8px 11px;
+    border: 1px solid #38415e;
+    border-radius: 8px;
+    background-color: #222a43;
+    color: #dce3f7;
+    font-size: 13px;
+}
+
+.game-info strong {
+    color: #78e6bd;
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    border: 1px solid #485475;
+    border-radius: 8px;
+    padding: 10px 13px;
+    background-color: #2b3450;
+    color: #f4f5fb;
+    font: inherit;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a4668;
+}
+
+main {
+    width: 92%;
+    max-width: 1400px;
+    margin: 26px auto;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 330px;
+    padding: 22px;
+    overflow: hidden;
+    border: 2px solid #557b83;
+    border-radius: 16px;
+    background-color: #1d4c61;
+    background-image: linear-gradient(135deg, #1d4c61, #286b70);
+}
+
+.scene-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.level-tag,
+.mission {
+    display: inline-block;
+    padding: 7px 11px;
+    border-radius: 7px;
+    background-color: #173d4b;
+    color: #c8f8e8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.mission {
+    background-color: #e4c76d;
+    color: #3b3218;
+    letter-spacing: 0;
+}
+
+.scene-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.scene-row-top {
+    min-height: 85px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    color: #e6f8ff;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.player-face {
+    display: inline-block;
+    padding: 15px 19px;
+    border: 3px solid #a9c8ff;
+    border-radius: 12px;
+    background-color: #637be8;
+    color: #fff;
+    font-size: 22px;
+    box-shadow: 0 5px 0 #3b4ba0;
+}
+
+.star {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: #ffe27a;
+    font-size: 40px;
+    text-shadow: 0 0 16px rgba(255, 226, 122, 0.4);
+}
+
+.star small {
+    color: #e7f2f3;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: none;
+}
+
+.platform {
+    display: inline-block;
+    padding: 13px 20px;
+    border: 2px solid #80d7b3;
+    border-radius: 8px;
+    background-color: #286e5d;
+    color: #e1fff3;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    box-shadow: 0 5px 0 #174b43;
+}
+
+.platform-middle {
+    align-self: center;
+    width: 45%;
+}
+
+.scene-hint {
+    margin: 0;
+    color: #c4e4e8;
+    font-size: 12px;
+    text-align: center;
+}
+
+.game-panels {
+    display: flex;
+    align-items: stretch;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.panel {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #303954;
+    border-radius: 14px;
+    background-color: #191f35;
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.panel-heading h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.panel-icon {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #29334f;
+    font-size: 23px;
+}
+
+.direction-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.control-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.control-row button {
+    min-width: 43px;
+    min-height: 40px;
+    background-color: #303b5b;
+    font-size: 18px;
+}
+
+.jump-button {
+    display: block;
+    width: 100%;
+    margin-top: 13px;
+    border-color: #3e9f87;
+    background-color: #267c68;
+}
+
+.jump-button:hover {
+    background-color: #32977e;
+}
+
+.panel-note {
+    margin: 18px 0 0;
+    color: #9ba8c9;
+    font-size: 12px;
+}
+
+.inventory-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item {
+    display: flex;
+    flex: 1 1 72px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 65px;
+    padding: 12px 7px;
+    border: 1px solid #424c6a;
+    border-radius: 9px;
+    background-color: #242d48;
+}
+
+.item span {
+    font-size: 25px;
+}
+
+.item small {
+    color: #c5cde2;
+    font-size: 11px;
+}
+
+.quest-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    color: #e5e9f6;
+    font-size: 12px;
+}
+
+.quest-item strong {
+    color: #78e6bd;
+    white-space: nowrap;
+}
+
+.quest-copy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quest-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    border: 2px solid #7583a8;
+    border-radius: 50%;
+}
+
+.quest-dot.done {
+    border-color: #78e6bd;
+    background-color: #78e6bd;
+}
+
+.progress-track {
+    height: 5px;
+    margin-top: 8px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #303954;
+}
+
+.progress-fill {
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #78e6bd;
+}
+
+.stars-progress {
+    width: 33.333%;
+}
+
+.key-progress,
+.monster-progress {
+    width: 0;
+}
+
+.display-lab {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px dashed #485475;
+    border-radius: 12px;
+    background-color: #171d30;
+}
+
+.display-lab h2 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.display-lab p {
+    margin: 0 0 15px;
+    color: #aeb8d2;
+    font-size: 13px;
+}
+
+.display-example {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #222a43;
+}
+
+.demo-block {
+    display: block;
+    margin: 4px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    background-color: #3b4b70;
+    font-size: 12px;
+}
+
+.demo-inline {
+    display: inline;
+    margin: 4px;
+    padding: 5px;
+    background-color: #426c65;
+    font-size: 12px;
+}
+
+.demo-inline-block {
+    display: inline-block;
+    margin: 4px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #765a8e;
+    font-size: 12px;
+}
+
+.demo-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.demo-flex span {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #7a5a37;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    background-color: #191f35;
+    color: #9ba8c9;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer span {
+    color: #78e6bd;
+}
+
+/* Responsive layout: stack the panels on smaller screens. */
+@media (max-width: 768px) {
+    .game-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .game-info,
+    .header-actions {
+        justify-content: center;
+    }
+
+    .game-panels {
+        flex-direction: column;
+    }
+
+    .panel {
+        width: 100%;
+    }
+
+    .game-area {
+        min-height: 300px;
+        padding: 15px;
+    }
+
+    .platform-middle {
+        width: 70%;
+    }
+}
+
+@media (max-width: 420px) {
+    main {
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    .game-header {
+        padding: 18px 12px;
+    }
+
+    .brand h1 {
+        font-size: 24px;
+    }
+
+    .game-info {
+        gap: 6px;
+    }
+
+    .game-info span {
+        padding: 7px;
+        font-size: 11px;
+    }
+
+    .scene-row-bottom {
+        gap: 12px;
+    }
+
+    .platform {
+        padding: 10px;
+        font-size: 9px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+}
